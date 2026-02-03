@@ -18,7 +18,7 @@ const friends = {
   mujeeb: {
     name: "Mujeebur Rahman",
     password: "cool lip",
-    dob: "2004-02-03", // YYYY-MM-DD
+    dob: "2002/02/03", // YYYY-MM-DD
      photo: "muj.jpg",
     wish: "Happy Birthday Rahman 🎉 May all your dreams come true!",
     memories: "From college bunk days to late night talks, every memory with you is gold ❤️.",

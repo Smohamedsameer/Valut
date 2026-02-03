@@ -39,7 +39,7 @@ const friends = {
 function verify() {
   const nameKey = document.getElementById("name").value;
   const pass = document.getElementById("pass").value;
-  const date = document.getElementById("dob").value;
+  const date = document.getElementById("dob").value.trim();
   const error = document.getElementById("error");
 
   if (!nameKey || !pass || !date) {
@@ -52,6 +52,10 @@ function verify() {
   // Password check
   if (friend.password !== pass) {
     error.innerText = "❌ Wrong password";
+    return;
+  }
+  if (date !== friend.dob) {
+    error.innerText = "❌ Date of birth does not match";
     return;
   }
 

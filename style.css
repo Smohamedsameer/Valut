@@ -135,10 +135,10 @@ button {
 
 /* ---------- ERROR & COUNTDOWN ---------- */
  #error {
-    font-size: 13px;
+    font-size: 15px;
     color: #fca5a5;
     animation: gentleShake 0.35s;
-    margin-left: 37%;
+    margin-left: 43%;
   }
 
   @keyframes gentleShake {
@@ -372,7 +372,7 @@ li{
 
 /* ---------- BUTTON ---------- */
 #wishBody button {
-  margin-top: 18px;
+  margin-top: 58px;
   padding: 12px;
   width: 300px;
   border-radius: 15px;

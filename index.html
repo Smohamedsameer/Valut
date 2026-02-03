@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Vault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-bg">
+
+  <header class="hero-header">
+  <h1>Kaleemian’s 25</h1>
+  <p>2018 – 2025</p>
+</header>
+
+  <div class="card">
+    <h1 class="glow">🎂 Birthday Vault</h1>
+    <p class="subtitle">Opens only on your birthday</p>
+<p id="countdown" class="countdown"></p>
+<br>
+<br>
+<hr>
+    <label>Select Your Name</label>
+    <select id="name">
+      <option value="">-- Select --</option>
+      <option value="sameer">Sameer</option>
+      <option value="javeed">Javeed</option>
+      <option value="mujeeb">Mujeebur Rahman</option>
+    </select>
+
+<label>Secret Password</label>
+<div class="pass-box">
+  <input type="password" id="pass" placeholder="Enter password">
+
+  <span onclick="togglePass()">👁️</span>
+</div>
+<br>
+<label>Enter Date Of Birth</label>
+<input type="date" id="dob" placeholder="">
+
+    <button  onclick="verify()" >Unlock 🎁</button>
+<br>
+    <p id="error"></p>
+ 
+    <p class="subtitles">This is only for KALEEMIANS 25 .....!
+      <br>
+      (2018 - 2025)
+      <br>
+    </p>
+    <h4 class="subtitles">Survived With</h4>
+<div class="survived">
+    <ul class="student">
+      <li>Abdul Rahman</li>
+      <li>Abdul Basith</li>
+      <li>Attiqur Rahman</li>
+      <li>Arshad </li>
+      <li>Asraar Ahamed</li>
+      <li>Jamal Mohamed Irshad</li>
+      <li>Jameel Mohamed Irfan</li>
+      <li>Javeed</li></ul>
+      <ul class="student">
+      <li>Hafiz Mansoor Ahamed</li>
+      <li>Mohamed</li>
+      <li>Mohamed Sameer</li>
+      <li>Mohamed Aamiry</li>
+      <li>Mohamed Barakath</li>
+      <li>Mohamed Kaleemi</li>
+      <li>Mohamed Idrees</li>
+      <li>Mohamed Fazil</li>
+      <li>Mohamed Fazil</li></ul>
+       <ul class="student">
+        <li>Mohamed Meeran</li>
+      <li>Mohamed Mujeebur Rahman</li>
+      <li>Mohamed Mudhasir</li>
+      <li>Mohamed Shameemudeen</li>
+      <li>Mohamed Riyaz</li>
+      <li>Mohamed Tameem Khalid</li>
+      <li>Hafiz Mohamed Usman</li>
+      <li>Mohamed Zakriya</li>
+      <li>Shahith</li>
+
+    </ul></div>
+
+      <div class="copyright">
+      <p>Copyrights @ 2026 , Wishes etc - All Rights Reserved</p>
+    </div>
+</div>
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>

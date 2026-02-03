@@ -1,0 +1,403 @@
+/* ---------- RESET ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body.dark-bg {
+   background:linear-gradient(to left , rgb(2, 0, 46) 40%,rgb(0, 0, 0) );
+  background-size: cover;
+    margin-left: 5%;
+    margin-top: 0%;
+   height: 1000%;
+  }
+
+  @keyframes bgSoftMove {
+    from { background-position: center top; }
+    to   { background-position: center bottom; }
+  }
+
+
+/* ---------- CARD ---------- */
+.card
+ {
+ width: 870px;
+ height: 1000px;
+    padding: 14px;
+    border-radius: 24px;
+    background: rgba(15, 23, 42, 0.78);
+    backdrop-filter: blur(18px);
+    box-shadow:
+      0 30px 60px rgba(0,0,0,0.85),
+      inset 0 0 30px rgba(124,58,237,0.15);
+    margin-top: 10%;
+}
+/* ---------- TEXT ---------- */
+.glow {
+  font-size: clamp(44px, 6vw, 56px);
+    color: #d8d2ff;
+    align-items: center;
+    text-align: center;
+    text-shadow:
+      0 0 12px rgba(124,58,237,0.9),
+      0 0 25px rgba(124,58,237,0.6);
+  }
+
+.subtitle {
+  text-align: center;
+ font-size: 20px;
+    color: #c7d2fe;
+    opacity: 0.9;
+  }
+
+/* ---------- FORM ---------- */
+label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.419);
+}
+
+select,
+input {
+  width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 14px;
+    background: #020617;
+    color: #e5e7eb;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: border 0.3s ease,
+    box-shadow 0.3s ease;
+  }
+
+  select:focus,
+  input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.35);
+  }
+
+/* ---------- PASSWORD BOX ---------- */
+.pass-box {
+  display: flex;
+  align-items: center;
+  background: #020617;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.pass-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.pass-box span {
+   color: #a78bfa;
+    font-size: 18px;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+  }
+   .pass-box span:active {
+    transform: scale(1.25);
+  }
+/* ---------- BUTTON ---------- */
+button {
+  margin-top: 30px;
+  margin-left: 25%;
+  width:440px ;
+    padding: 13px;
+    font-size: 15px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    box-shadow:
+      0 12px 28px rgba(37,99,235,0.55),
+      inset 0 0 15px rgba(255,255,255,0.2);
+    animation: softPulse 2.5s infinite;
+  }
+
+  @keyframes softPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(124,58,237,0.5); }
+    70%  { box-shadow: 0 0 0 16px rgba(124,58,237,0); }
+    100% { box-shadow: 0 0 0 0 rgba(124,58,237,0); }
+  }
+
+
+/* ---------- ERROR & COUNTDOWN ---------- */
+ #error {
+    font-size: 13px;
+    color: #fca5a5;
+    animation: gentleShake 0.35s;
+    margin-left: 37%;
+  }
+
+  @keyframes gentleShake {
+    0% { transform: translateX(0); }
+    30% { transform: translateX(-5px); }
+    60% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+ .countdown {
+    font-size: 14px;
+    color: #fde68a;
+    animation: glowBreath 1.8s infinite;
+    margin-left: 33%
+  }
+
+  @keyframes glowBreath {
+    0%   { opacity: 0.65; }
+    50%  { opacity: 1; text-shadow: 0 0 10px #fde68a; }
+    100% { opacity: 0.65; }
+  }
+  
+/* ---------- HR ---------- */
+hr {
+  margin: 15px 0;
+  border: none;
+  height: 1px;
+  background: #334155;
+}
+
+/* ---------- CONFETTI ---------- */
+
+
+.subtitles {
+  margin-top: 20px;
+  text-align: center;
+ font-size: 20px;
+    color: #c7d2fe;
+    opacity: 0.9;
+  }
+.survived{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-left: 20px;
+  font-size: 30;
+  font-weight: bold;
+  background:  linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.721)
+    ), url("group.jpg") ;
+  background-position: center center;
+  background-size: 99%;
+  background-repeat: no-repeat;
+  filter:brightness(10px);
+  padding: 5px;
+  margin-top: 15px;
+}
+.student{
+  text-decoration: none;
+  list-style: none;
+  color: #ffffffe6;
+  margin-top: 20px;
+}
+li{
+  margin-top: 3px;
+}
+.copyright{
+   margin-top: 40px;
+   margin-left: 25%;
+   color: rgb(177, 176, 176);
+   font-family: sans-serif;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 480px) {
+
+  body.dark-bg {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .card
+  {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  select,
+  input {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .pass-box span {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 17px;
+  }
+
+  #wishText,
+  .text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .text{
+    margin-top: 30%;
+  }
+}
+/* ---------- HEADER ---------- */
+.hero-header {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgb(0, 0, 0)
+    ),
+    url("group1.jpg");
+
+  background-size: cover;
+  background-position: center 65%;
+  background-repeat: no-repeat;
+  margin-left: -20px;
+}
+
+/* BIG UNIQUE HEADING */
+.hero-header h1 {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 5px 5px 7px rgb(255, 0, 0);
+}
+
+/* SUB TEXT */
+.hero-header p {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #e9d5ff;
+}
+/* ---------- WISH BODY CONTAINER ---------- */
+#wishBody {
+  width: 92%;
+  max-width: 850px;
+  height: 80vh;
+  margin: 30px auto;
+  padding: 28px 22px;
+
+  border-radius: 20px;
+
+  /* Glass background */
+  background-image:
+    linear-gradient(
+      rgba(15, 23, 42, 0.92),
+      rgba(255, 255, 255, 0.95)
+    );
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+
+  color: #e5e7eb;
+  text-align: center;
+
+  /* Animation */
+  animation: wishEnter 1s ease forwards;
+  opacity: 0;
+  margin-left: 23px;
+}
+
+/* ---------- TITLE ---------- */
+#wishTitle {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #c4b5fd;
+  text-shadow: 0 0 12px rgba(139,92,246,0.6);
+}
+
+/* ---------- TEXT ---------- */
+#wishText {
+  font-size: 18px;
+  margin: 12px 0;
+  color: #f1f5f9;
+}
+
+.text {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #cbd5f5;
+}
+
+/* ---------- HR ---------- */
+.wishBody hr {
+  margin: 18px 0;
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #7c3aed,
+    transparent
+  );
+}
+
+/* ---------- BUTTON ---------- */
+#wishBody button {
+  margin-top: 18px;
+  padding: 12px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow:
+      0 12px 28px rgba(37,99,235,0.55),
+      inset 0 0 15px rgba(255,255,255,0.2);
+  
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #4f46e5
+  );
+margin-right: 20%;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes wishEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

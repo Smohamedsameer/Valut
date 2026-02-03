@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Memories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-bg">
+
+  <div id="wishBody" >
+    <h1 id="wishTitle" class="glow"></h1>
+    <p id="wishText"></p>
+    <hr>
+    <div class="text">
+    <p id="memories"></p>
+    <br>
+    <p id="memoriess"></p><br>
+     <p id="memories1"></p><br>
+     <p id="memories2"></p><br>
+     <p id="memories3"></p><br>
+     <p id="memories4"></p><br>
+     <p id="memories5"></p><br>
+     <p id="memories6"></p><br>
+     <p id="memories7"></p><br>
+     <p id="memories8"></p><br>
+     <p id="memories9"></p><br>
+     <p id="memories10"></p><br>
+</div>
+
+    <button onclick="goBack()">Try Another Friend</button>
+    <audio id="bdayMusic" autoplay loop>
+  <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+  </div>
+
+  <!-- <canvas id="confetti"></canvas> -->
+  <script>
+      const data = JSON.parse(localStorage.getItem("friendData"));
+
+  if (!data) {
+    window.location.href = "index.html";
+  }
+
+  document.getElementById("wishTitle").innerText =
+    `🎉 Happy Birthday ${data.name}!`;
+
+  document.getElementById("wishText").innerText = data.wish;
+
+  const memoryIds = [
+    "memories",
+    "memoriess",
+    "memories1",
+    "memories2",
+    "memories3",
+    "memories4",
+    "memories5",
+    "memories6",
+    "memories7",
+    "memories8",
+    "memories9",
+    "memories10"
+  ];
+
+  memoryIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && data[id]) {
+      el.innerText = data[id];
+    } else if (el) {
+      el.style.display = "none";
+    }
+  });
+
+  const body = document.getElementById("wishBody");
+  body.style.background = `
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('${data.photo}') center/cover no-repeat
+  `;
+
+    function goBack() {
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+
+    //  const canvas = document.getElementById("confetti");
+  
+     
+  </script>
+</body>
+</html>

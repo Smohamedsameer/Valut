@@ -25,7 +25,7 @@ body.dark-bg {
 .card
  {
  width: 870px;
- height: 1000px;
+ height: 1300px;
     padding: 14px;
     border-radius: 24px;
     background: rgba(15, 23, 42, 0.78);
@@ -55,10 +55,12 @@ body.dark-bg {
 
 /* ---------- FORM ---------- */
 label {
-  display: block;
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
   text-align: left;
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 25px;
   color: rgba(255, 255, 255, 0.419);
 }
 
@@ -66,7 +68,9 @@ select,
 input {
   width: 100%;
     padding: 12px;
-    font-size: 14px;
+    height: 70px;
+    line-height: 40px;
+    font-size: 20px;
     border-radius: 14px;
     background: #020617;
     color: #e5e7eb;
@@ -95,6 +99,7 @@ input {
   border: none;
   background: transparent;
   color: white;
+  font-size: 30px;
 }
 
 .pass-box span {
